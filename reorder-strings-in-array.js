@@ -3,23 +3,27 @@ let arr = ["ABC", "123", "asd"]
 
 function reorderStrings(arr) {
 
-  let splitArr = arr.map(el=>{
-    return el.split('')
-  })
+  //create an array to hold the altered strings
+  let newArr = []
 
-  let newSplitArr = []
+  //iterate through the original array
+  for(let j=0; j<arr.length; j++) {
 
-  for(let j=0; j<splitArr.length; j++) {
-    for(let i=0; i<splitArr[j].length; i++) {
-      if(newSplitArr[i]){
-        newSplitArr[i].push(splitArr[j][i])
-      } else {
-        newSplitArr.push([splitArr[j][i]])
+    // split each string into an array: "ABC" => ["A", "B", "C"]
+    let smallArr = arr[j].split('')
+
+    // loop through each newly created smallArray
+    for(let i=0; i<smallArr.length; i++) {
+      // if newArr already has started a new smallArray, add to it
+      if(newArr[i]){
+        newArr[i].push(smallArr[i])
+      } else { //if no smallArray exists yet at this index, create a new smallArray
+        newArr.push([smallArr[i]])
       }
     }
   }
 
-  return newSplitArr.map(smallArr => {
+  return newArr.map(smallArr => {
     return smallArr.join('')
   })
 
