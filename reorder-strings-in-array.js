@@ -1,22 +1,28 @@
 let arr = ["ABC", "123", "asd"]
-// return ["A1a", "B2s", "C3d"]
+// goal: return ["A1a", "B2s", "C3d"]
 
-let splitArr = arr.map(el=>{
-  return el.split('')
-})
+function reorderStrings(arr) {
 
-let newSplitArr = []
+  let splitArr = arr.map(el=>{
+    return el.split('')
+  })
 
-for(let j=0; j<splitArr.length; j++) {
-  for(let i=0; i<splitArr[j].length; i++) {
-    if(newSplitArr[i]){
-      newSplitArr[i].push(splitArr[j][i])
-    } else {
-      newSplitArr.push([splitArr[j][i]])
+  let newSplitArr = []
+
+  for(let j=0; j<splitArr.length; j++) {
+    for(let i=0; i<splitArr[j].length; i++) {
+      if(newSplitArr[i]){
+        newSplitArr[i].push(splitArr[j][i])
+      } else {
+        newSplitArr.push([splitArr[j][i]])
+      }
     }
   }
+
+  return newSplitArr.map(smallArr => {
+    return smallArr.join('')
+  })
+
 }
 
-newSplitArr.map(smallArr => {
-  return smallArr.join('')
-})
+reorderStrings(arr)
