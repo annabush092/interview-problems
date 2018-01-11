@@ -23,10 +23,16 @@ function reorderStrings(arr) {
     }
   }
 
-  return newArr.map(smallArr => {
-    return smallArr.join('')
+  //join the small arrays back into strings: ["A", "1", "a"] => "A1a"
+  return newArr.map(newSmallArr => {
+    return newSmallArr.join('')
   })
 
 }
 
+//test simple case
 reorderStrings(arr)
+
+//test an array in which strings are different lengths
+let weirdArr = ["ABCD", "123", "asdfg"]
+reorderStrings(weirdArr)
