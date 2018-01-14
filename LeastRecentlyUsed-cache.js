@@ -9,6 +9,7 @@
 
 //BONUS: I implemented a Least Recently UPDATED cache, instead of Least Recently USED.
 // To alter this class to a true LRU cache, move the re-ordering check found in set() to get() and refactor as necessary
+//BONUS: What is a doubly linked list, and am I implementing this "correctly"?
 
 let store = {}
 
