@@ -1,3 +1,5 @@
+// Given an array of strings, write a function to return a new array of strings, in which the first string is all of the first letters of the original array, the second string is all of the second letters of the original array, etc
+
 let arr = ["ABC", "123", "asd"]
 // goal: return ["A1a", "B2s", "C3d"]
 
