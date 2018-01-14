@@ -1,5 +1,7 @@
 // Given an integer, write a function that returns that integer with the numbers in reverse.
 
+// BONUS: write another function that does this by using the tens place of the integer
+
 let posInt = 123
 // Goal: return 321
 
