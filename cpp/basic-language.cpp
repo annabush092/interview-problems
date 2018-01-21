@@ -15,15 +15,18 @@ void sayHiToName(std::string);
 int main() {
 
   std::cout << "Hello from main! \n";
+
   std::string name = getFirstNameFromUser();
   sayHiToName(name);
 
   name = getFullNameFromUser();
   sayHiToName(name);
 
+  std::cout << "Goodbye from main!\n";
   return 0;
 }
 
+// function to test standard cin functionality and returning a string
 std::string getFirstNameFromUser() {
   std::string name;
 
@@ -33,9 +36,10 @@ std::string getFirstNameFromUser() {
   return name;
 }
 
+// function to test getline functionality, as well as cin.ignore, and returning a string
 std::string getFullNameFromUser() {
   std::string name;
-  std::cin.ignore(10, '\n'); //clear the keyboard buffer of any unwanted null characters
+  std::cin.ignore(10, '\n'); //clear the keyboard buffer of any old, unwanted null characters
 
   std::cout << "Hello, I am Old Man Computer. I don't think we have met before...\nWhat is your full name?\n";
   getline(std::cin, name);  //this will read until it reaches an endl (until user presses return)
@@ -43,6 +47,7 @@ std::string getFullNameFromUser() {
   return name;
 }
 
+// function to test passing arguments- default is pass by value?
 void sayHiToName(std::string name) {
   std::cout << "Hello, " << name << std::endl;
   return;
