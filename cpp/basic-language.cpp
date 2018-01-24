@@ -47,7 +47,7 @@ std::string getFullNameFromUser() {
   return name;
 }
 
-// function to test passing arguments- default is pass by value?
+// function to test passing arguments- default is pass by value
 void sayHiToName(std::string name) {
   std::cout << "Hello, " << name << std::endl;
   return;
