@@ -3,7 +3,7 @@
 // replace every number divisible by 5 with "buzz"
 // replace every number divisible by both with "fizzbuzz"
 
-package beginning_java;
+package algos_in_java;
 import java.util.Scanner;
 
 public class FizzBuzz {

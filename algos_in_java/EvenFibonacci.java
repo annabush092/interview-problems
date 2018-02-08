@@ -6,7 +6,7 @@
 
 //BONUS refactor: You can refactor this solution to take up less memory- you don't need to store the fibonacci sequence in order to solve this problem. Instead, you can simply have 2 int variables that you continue to update as you go through the sequence.
 
-package beginning_java;
+package algos_in_java;
 import java.util.*;
 
 public class EvenFibonacci {
