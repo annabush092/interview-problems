@@ -29,6 +29,7 @@ public class CollectionStudy {
     al.add(1);
     al.add(2);
     System.out.println("ArrayList first element: " + al.get(0));
+    System.out.println("ArrayList last element: " + al.get(al.size()-1));
     System.out.println("ArrayList all elements: " + al);
   }
 
