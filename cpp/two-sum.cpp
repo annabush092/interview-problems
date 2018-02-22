@@ -26,10 +26,8 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
     for(int i=0; i<nums.size(); i++) {
         diff = target - nums[i];
-        cout << "current number: " << nums[i] << endl;
-        cout << "diff: " << diff << endl;
-        cout << "tried[diff]= " << tried[diff] << endl;
-        if(tried[diff]) { // problem here is that 0 == false, so if you find a number at index 0, it will not pass this test.
+        // .count(key) on a map counts how many times that key is found. So if it is not found, it == 0. If it is found, it is == 1 (and >0). 
+        if(tried.count(diff) > 0) {
           cout << "found" << endl;
           cout << "tried[diff]=" << tried[diff] << endl;
           cout << "i=" << i << endl;
@@ -37,7 +35,6 @@ vector<int> twoSum(vector<int>& nums, int target) {
           solutionIndexes[1] = i;
           return solutionIndexes;
         } else {
-          cout << "adding to map: " << nums[i] << " : " << i << endl;
           tried[nums[i]] = i;
         }
     }

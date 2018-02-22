@@ -19,4 +19,3 @@ To test these out, throw the lines of code into your console or better yet into 
 *BONUS material* is available (unsolved as yet) in:
 - reverse-int
 - LeastRecentlyUsed-cache
-- Complete two-sum in C++
