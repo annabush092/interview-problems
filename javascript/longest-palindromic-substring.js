@@ -8,6 +8,7 @@ let str4 = "aahjaagfdgankahvjhgkjlkjlaasknksjjjjjl;jlkjjjj"
 let str5 = ""
 let str6 = "a"
 
+//this can be more optimized!
 var longestPalindrome = function(s) {
 
   function isAPalindrome(str) {

@@ -24,3 +24,4 @@ To run in the browser terminal:
 - reverse-int
 - LeastRecentlyUsed-cache
 - three-sum
+- longest-palindromic-substring can be optimized
