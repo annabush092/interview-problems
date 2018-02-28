@@ -2,6 +2,9 @@
 
 let str = "babad"
 // Goal: "bab" or "aba", both are valid answers
+let str2 = "abba"
+let str3 = "abbcb"
+let str4 = "aahjaagfdgankahvjhgkjlkjlaasknksjjjjjl;jlkjjjj"
 
 var longestPalindrome = function(s) {
 
@@ -14,8 +17,20 @@ var longestPalindrome = function(s) {
     return true
   }
 
+  for(let i=s.length; i>0; i--) {
+    for(let j=0; j<s.length; j++) {
+      let subStr = s.slice(j, j+i)
+      // if the substring is not long enough, move on to next smaller substrings
+      if(subStr.length < i){
+        break
+      } else if(isAPalindrome(subStr)) {
+        return subStr
+      }
+    }
+  }
 
+  return "no palindromes found"
 };
 
 //test
-console.log("result: ", longestPalindrome(str))
+console.log("result: ", longestPalindrome(str4))
