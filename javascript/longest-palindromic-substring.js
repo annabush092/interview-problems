@@ -5,6 +5,8 @@ let str = "babad"
 let str2 = "abba"
 let str3 = "abbcb"
 let str4 = "aahjaagfdgankahvjhgkjlkjlaasknksjjjjjl;jlkjjjj"
+let str5 = ""
+let str6 = "a"
 
 var longestPalindrome = function(s) {
 
@@ -33,4 +35,4 @@ var longestPalindrome = function(s) {
 };
 
 //test
-console.log("result: ", longestPalindrome(str4))
+console.log("result: ", longestPalindrome(str6))
