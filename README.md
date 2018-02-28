@@ -14,8 +14,13 @@ To run in your console, type:
   ./cpp/file-name   //runs the compiled file
 
 *JAVASCRIPT FILES*
-To test these out, throw the lines of code into your console or better yet into https://repl.it to mess around with the code yourself.
+To run in the browser terminal:
+  place the filename of the algorithm you are working on in javascript/index.html, as the script src.
+  open index.html in your browser
+  open the browser terminal
+  refresh the page to run the code
 
 *BONUS material* is available (unsolved as yet) in:
 - reverse-int
 - LeastRecentlyUsed-cache
+- three-sum
