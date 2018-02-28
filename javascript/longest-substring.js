@@ -3,6 +3,28 @@
 let s = "abca"
 // Goal: return 3 (the length of "abc" or of "bca" without repeating any characters)
 
+//first solution
+var lengthOfLongestSubstring = function(s) {
+    let substrArr = []
+    let longest = 0
+    for(let i=0; i<s.length; i++) {
+        let found = substrArr.findIndex((el) => {
+          return el===s[i]
+        })
+        if(found !== -1) {
+            substrArr = substrArr.slice(found+1)
+        }
+        substrArr.push(s[i])
+
+        if(substrArr.length > longest) {
+            longest = substrArr.length
+        }
+    }
+
+    return longest
+};
+
+//second solution
 function longestUniqSubstr(str) {
   let usedObj = {}
   let longest = 0
